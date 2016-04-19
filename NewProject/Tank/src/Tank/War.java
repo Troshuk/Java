@@ -1,7 +1,7 @@
 package Tank;
 
 import static Tank.Game.pointers;
-import static Tank.Game.score;
+import static Tank.Game.rounds;
 
 /**
  * Created by Progr@mist on 19.04.2016.
@@ -17,7 +17,7 @@ public class War {
             my.life -= b;
             if (my.life <= 0) my.life = 0;
 //            System.out.println("Моє здоровя: " + lo + "-" + b + "=" + my.life);
-            score++;
+            rounds++;
 
             if (my.life <= 0) return enemy.name;
             int a = (pointers - (pointers / my.attack)) / 20;

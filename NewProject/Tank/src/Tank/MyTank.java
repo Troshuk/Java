@@ -43,7 +43,7 @@ public class MyTank {
             System.out.println("Введіть броню танка від 1 до " + points + ": ");
             armor = Integer.parseInt(reader.readLine());
         }
-        System.out.println("Очків залишилося: " + (points -= armor));
+//        System.out.println("Очків залишилося: " + (points -= armor));
 
         Tank tank = new Tank(name, life, attack, armor);
         return tank;
