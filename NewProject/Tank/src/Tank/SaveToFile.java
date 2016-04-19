@@ -11,8 +11,8 @@ import java.io.IOException;
 public class SaveToFile {
     public static void saveToFile(String play, int round, boolean winOrLose) throws IOException {
         File file = new File("res//result.txt");
-        FileInputStream fis = new FileInputStream(file);
         if (!file.exists()) file.createNewFile();
+        FileInputStream fis = new FileInputStream(file);
         int q;
         int w;
         if (winOrLose) {
@@ -56,12 +56,11 @@ public class SaveToFile {
                 lom1 += s1.charAt(i);
             }
             w += Integer.parseInt(lom1);
-
+        }
             String text = "(" + play + ") Rounds played: " + round + "; Wins: " + q + "; Losses: " + w + ".";
             FileWriter resultat = new FileWriter(file, true);
             resultat.write(text + "\r\n" + "\r\n");
             resultat.flush();
-//        System.out.println(text);
-        }
+//            System.out.println(text);
     }
 }
