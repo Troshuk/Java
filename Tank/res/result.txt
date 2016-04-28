@@ -1,32 +1,32 @@
-(Tank) Rounds played: 5; Wins: 1; Losses: 0.
+(Tintin) Rounds played: 2; Wins: 0; Losses: 1.
 
-(Tank) Rounds played: 10; Wins: 1; Losses: 1.
+(Tintin) Rounds played: 2; Wins: 0; Losses: 2.
 
-(Proffesor) Rounds played: 8; Wins: 0; Losses: 1.
+(Tintin) Rounds played: 2; Wins: 0; Losses: 3.
 
-(Proffesor) Rounds played: 13; Wins: 1; Losses: 1.
+(Tintin) Rounds played: 5; Wins: 1; Losses: 3.
 
-(Льоха) Rounds played: 8; Wins: 0; Losses: 1.
+(Tintin) Rounds played: 6; Wins: 1; Losses: 4.
 
-(Ден) Rounds played: 12; Wins: 1; Losses: 0.
+(Tintin) Rounds played: 8; Wins: 1; Losses: 5.
 
-(Льоха) Rounds played: 1; Wins: 1; Losses: 1.
+(Tintin) Rounds played: 8; Wins: 1; Losses: 6.
 
-(Den) Rounds played: 17; Wins: 1; Losses: 0.
+(Den) Rounds played: 2; Wins: 1; Losses: 0.
 
-(Den) Rounds played: 5; Wins: 2; Losses: 0.
+(Den) Rounds played: 8; Wins: 1; Losses: 1.
 
-(sdfs) Rounds played: 15; Wins: 1; Losses: 0.
+(Den) Rounds played: 8; Wins: 1; Losses: 2.
 
-(Den) Rounds played: 9; Wins: 2; Losses: 1.
+(Den) Rounds played: 8; Wins: 1; Losses: 3.
 
-(Den) Rounds played: 10; Wins: 3; Losses: 1.
+(Den) Rounds played: 5; Wins: 2; Losses: 3.
 
-(Den) Rounds played: 6; Wins: 4; Losses: 1.
+(Den) Rounds played: 8; Wins: 2; Losses: 4.
 
-(Den) Rounds played: 7; Wins: 5; Losses: 1.
+(Tintin) Rounds played: 8; Wins: 1; Losses: 7.
 
-(Den) Rounds played: 8; Wins: 6; Losses: 1.
+(Tintin) Rounds played: 8; Wins: 1; Losses: 8.
 
-(Den) Rounds played: 11; Wins: 7; Losses: 1.
+(Tintin) Rounds played: 3; Wins: 2; Losses: 8.
 

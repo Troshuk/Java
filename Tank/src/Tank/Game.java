@@ -27,7 +27,7 @@ public class Game {
             if (enemy.getAttack() > player.getArmor()) {
                 enemyDamage += 5;
             }
-            player.setLife(enemyDamage);
+            player.setLife(player.getLife() - enemyDamage);
             if (player.getLife() <= 0) {
                 player.setLife(0);
             }
@@ -37,7 +37,7 @@ public class Game {
                 return enemy.getName();
             }
             int playerDamage = (POINTERS - (POINTERS / player.getAttack())) / 20;
-            if (player.getAttack() > enemy.getAttack()) {
+            if (player.getAttack() > enemy.getArmor()) {
                 playerDamage += 5;
             }
             enemy.setLife(enemy.getLife() - playerDamage);

@@ -5,22 +5,19 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * Created by Progr@mist on 19.04.2016.
- */
 public class SaveToFile {
     public static void saveToFile(String play, int round, boolean winOrLose) throws IOException {
         File file = new File("res//result.txt");
         if (!file.exists()) file.createNewFile();
         FileInputStream fis = new FileInputStream(file);
-        int q;
-        int w;
+        int win;
+        int lose;
         if (winOrLose) {
-            q = 1;
-            w = 0;
+            win = 1;
+            lose = 0;
         } else {
-            q = 0;
-            w = 1;
+            win = 0;
+            lose = 1;
         }
         boolean findPlayers = false;
         byte[] content = new byte[fis.available()];
@@ -37,29 +34,29 @@ public class SaveToFile {
             }
         }
         if (findPlayers) {
-            int win = finder.lastIndexOf("Wins: ") + 6;
-            String fis1 = finder;
-            String s = fis1.substring(win);
-            String lom = "";
-            for (int i = 0; i < s.length(); i++) {
-                if (s.charAt(i) == ';') break;
-                lom += s.charAt(i);
+            int indexWinsPoints = finder.lastIndexOf("Wins: ") + 6;
+            String searchWinPoints = finder;
+            String cutString1 = searchWinPoints.substring(indexWinsPoints);
+            String winsPoints = "";
+            for (int i = 0; i < cutString1.length(); i++) {
+                if (cutString1.charAt(i) == ';') break;
+                winsPoints += cutString1.charAt(i);
             }
-            q += Integer.parseInt(lom);
+            win += Integer.parseInt(winsPoints);
 
-            int lose = finder.lastIndexOf("Losses: ") + 8;
-            String fis2 = finder;
-            String s1 = fis2.substring(lose);
-            String lom1 = "";
-            for (int i = 0; i < s.length(); i++) {
-                if (s1.charAt(i) == '.') break;
-                lom1 += s1.charAt(i);
+            int indexLosesPoints = finder.lastIndexOf("Losses: ") + 8;
+            String searchLosePoints = finder;
+            String cutString2 = searchLosePoints.substring(indexLosesPoints);
+            String losesPoints = "";
+            for (int i = 0; i < cutString1.length(); i++) {
+                if (cutString2.charAt(i) == '.') break;
+                losesPoints += cutString2.charAt(i);
             }
-            w += Integer.parseInt(lom1);
+            lose += Integer.parseInt(losesPoints);
         }
-            String text = String.format("(%s) Rounds played: %d; Wins: %d; Losses: %d.", play, round, q, w);
-            FileWriter resultat = new FileWriter(file, true);
-            resultat.write(String.format("%s\r\n\r\n", text));
-            resultat.flush();
+        String text = String.format("(%s) Rounds played: %d; Wins: %d; Losses: %d.", play, round, win, lose);
+        FileWriter resultat = new FileWriter(file, true);
+        resultat.write(String.format("%s\r\n\r\n", text));
+        resultat.flush();
     }
 }
