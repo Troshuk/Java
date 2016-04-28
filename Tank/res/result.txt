@@ -1,0 +1,18 @@
+(Tank) Rounds played: 5; Wins: 1; Losses: 0.
+
+(Tank) Rounds played: 10; Wins: 1; Losses: 1.
+
+(Proffesor) Rounds played: 8; Wins: 0; Losses: 1.
+
+(Proffesor) Rounds played: 13; Wins: 1; Losses: 1.
+
+(Льоха) Rounds played: 8; Wins: 0; Losses: 1.
+
+(Ден) Rounds played: 12; Wins: 1; Losses: 0.
+
+(Льоха) Rounds played: 1; Wins: 1; Losses: 1.
+
+(Den) Rounds played: 17; Wins: 1; Losses: 0.
+
+(Den) Rounds played: 5; Wins: 2; Losses: 0.
+
