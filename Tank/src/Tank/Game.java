@@ -5,11 +5,11 @@ package Tank;
  */
 public class Game {
     public static int rounds;
-    public static int pointers = 300;
+    public static final int pointers = 300;
     public static String player;
 
     public static void main(String[] args) throws Exception {
-        String winner = fight(СreatePlayerTank.playerTank(), СreateEnemyTank.enemyTank());
+        String winner = fight(СreatePlayerTank.createTank(), СreateEnemyTank.enemyTank());
         System.out.println("Winner: " + winner + "!");
         System.out.println(createWinResult(winner == player));
         SaveToFile.saveToFile(player, rounds, winner == player);
