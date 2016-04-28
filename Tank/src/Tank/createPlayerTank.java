@@ -9,8 +9,8 @@ import static Tank.Game.pointers;
 /**
  * Created by Progr@mist on 19.04.2016.
  */
-public class createPlayerTank {
-    public static Tank myTank() throws Exception {
+public class CreatePlayerTank {
+    public static Tank playerTank() throws Exception {
         String name = "";
         int life = 0;
         int attack = 0;
@@ -45,7 +45,6 @@ public class createPlayerTank {
         }
 //        System.out.println("Points to:" + (points -= armor));
 
-        Tank tank = new Tank(name, life, attack, armor);
-        return tank;
+        return new Tank(name, life, attack, armor);
     }
 }
