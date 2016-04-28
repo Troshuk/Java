@@ -5,7 +5,7 @@ package Tank;
  */
 public class Game {
     public static int rounds;
-    public static final int pointers = 300;
+    public static final int POINTERS = 300;
     public static String player;
 
     public static void main(String[] args) throws Exception {
@@ -25,7 +25,7 @@ public class Game {
         while (true) {
             if (enemy.getLife() <= 0 || player.getLife() <= 0) break;
 
-            int b = (pointers - (pointers / enemy.getAttack())) / 20;
+            int b = (POINTERS - (POINTERS / enemy.getAttack())) / 20;
             if (enemy.getAttack() > player.getArmor()) b += 5;
 //            int lo = player.getLife();
             player.setLife(b);
@@ -34,7 +34,7 @@ public class Game {
             rounds++;
 
             if (player.getLife() <= 0) return enemy.getName();
-            int a = (pointers - (pointers / player.getAttack())) / 20;
+            int a = (POINTERS - (POINTERS / player.getAttack())) / 20;
             if (player.getAttack() > enemy.getAttack()) a += 5;
 //            int lol = enemy.getLife();
             enemy.setLife(enemy.getLife() - a);

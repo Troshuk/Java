@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import static Tank.Game.player;
-import static Tank.Game.pointers;
+import static Tank.Game.POINTERS;
 
 /**
  * Created by Progr@mist on 19.04.2016.
@@ -15,7 +15,7 @@ public class СreatePlayerTank {
         int life = 0;
         int attack = 0;
         int armor = 0;
-        int points = pointers;
+        int points = POINTERS;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 

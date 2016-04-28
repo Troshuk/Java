@@ -2,7 +2,7 @@ package Tank;
 
 import java.util.Random;
 
-import static Tank.Game.pointers;
+import static Tank.Game.POINTERS;
 
 /**
  * Created by Progr@mist on 19.04.2016.
@@ -11,7 +11,7 @@ public class СreateEnemyTank {
     public static Tank enemyTank() {
         String name = "EnemyTank";
         int Low = 1;
-        int High = pointers;
+        int High = POINTERS;
         Random random = new Random();
         int life = random.nextInt(High - Low) + Low;
         int attack = random.nextInt(High - life - Low) + Low;
