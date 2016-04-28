@@ -9,7 +9,7 @@ public class Game {
     public static String player;
 
     public static void main(String[] args) throws Exception {
-        String winner = fight(CreatePlayerTank.playerTank(), CreateEnemyTank.enemyTank());
+        String winner = fight(СreatePlayerTank.playerTank(), СreateEnemyTank.enemyTank());
         System.out.println("Winner: " + winner + "!");
         System.out.println(createWinResult(winner == player));
         SaveToFile.saveToFile(player, rounds, winner == player);

@@ -9,7 +9,7 @@ import static Tank.Game.pointers;
 /**
  * Created by Progr@mist on 19.04.2016.
  */
-public class CreatePlayerTank {
+public class СreatePlayerTank {
     public static Tank playerTank() throws Exception {
         String name = "";
         int life = 0;

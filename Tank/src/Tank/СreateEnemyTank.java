@@ -7,7 +7,7 @@ import static Tank.Game.pointers;
 /**
  * Created by Progr@mist on 19.04.2016.
  */
-public class CreateEnemyTank {
+public class СreateEnemyTank {
     public static Tank enemyTank() {
         String name = "EnemyTank";
         int Low = 1;
