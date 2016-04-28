@@ -1,47 +1,50 @@
 package Tank;
 
-/**
- * Created by Progr@mist on 18.04.2016.
- */
 public class Game {
     public static int rounds;
     public static final int POINTERS = 300;
-    public static String player;
 
     public static void main(String[] args) throws Exception {
-        String winner = fight(СreatePlayerTank.createTank(), СreateEnemyTank.enemyTank());
-        System.out.println("Winner: " + winner + "!");
-        System.out.println(createWinResult(winner == player));
-        SaveToFile.saveToFile(player, rounds, winner == player);
+        Tank playerTank = CreatePlayerTank.createTank();
+        String userName = playerTank.getName();
+        String winner = fight(playerTank, CreateEnemyTank.enemyTank());
+        System.out.printf("Winner: %s! ", winner);
+        System.out.println(createWinResult(winner.equals(userName)));
+        SaveToFile.saveToFile(userName, rounds, winner.equals(userName));
     }
 
-    private static String createWinResult(boolean b) {
-        String s = "YOU ";
-        if (b) return s + "WIN!!!";
-        else return s + "LOSE :(";
+    private static String createWinResult(boolean isWinner) {
+        return String.format("YOU %s", isWinner ? "Win" : "Lose");
     }
 
     private static String fight(Tank player, Tank enemy) {
-        while (true) {
-            if (enemy.getLife() <= 0 || player.getLife() <= 0) break;
 
-            int b = (POINTERS - (POINTERS / enemy.getAttack())) / 20;
-            if (enemy.getAttack() > player.getArmor()) b += 5;
-//            int lo = player.getLife();
-            player.setLife(b);
-            if (player.getLife() <= 0) player.setLife(0);
-//            System.out.println("My health: " + lo + "-" + b + "=" + player.getLife());
+        while (true) {
+            if (enemy.getLife() <= 0 || player.getLife() <= 0) {
+                break;
+            }
+            int enemyDamage = (POINTERS - (POINTERS / enemy.getAttack())) / 20;
+            if (enemy.getAttack() > player.getArmor()) {
+                enemyDamage += 5;
+            }
+            player.setLife(enemyDamage);
+            if (player.getLife() <= 0) {
+                player.setLife(0);
+            }
             rounds++;
 
-            if (player.getLife() <= 0) return enemy.getName();
-            int a = (POINTERS - (POINTERS / player.getAttack())) / 20;
-            if (player.getAttack() > enemy.getAttack()) a += 5;
-//            int lol = enemy.getLife();
-            enemy.setLife(enemy.getLife() - a);
-            if (enemy.getLife() <= 0) enemy.setLife(0);
-//            System.out.println("Enemy health: " + lol + "-" + a + "=" + enemy.getLife());
+            if (player.getLife() <= 0) {
+                return enemy.getName();
+            }
+            int playerDamage = (POINTERS - (POINTERS / player.getAttack())) / 20;
+            if (player.getAttack() > enemy.getAttack()) {
+                playerDamage += 5;
+            }
+            enemy.setLife(enemy.getLife() - playerDamage);
+            if (enemy.getLife() <= 0) {
+                enemy.setLife(0);
+            }
         }
-        if (player.getLife() > enemy.getLife()) return player.getName();
-        else return enemy.getName();
+        return player.getLife() > enemy.getLife() ? player.getName() : enemy.getName();
     }
 }

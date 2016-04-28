@@ -30,7 +30,7 @@ public class SaveToFile {
         for (String line : lines) {
             String[] words = line.split(" ");
             for (String word : words) {
-                if (word.equalsIgnoreCase("(" + play + ")")) {
+                if (word.equalsIgnoreCase(String.format("(%s)", play))) {
                     finder = line;
                     findPlayers = true;
                 }
@@ -57,10 +57,9 @@ public class SaveToFile {
             }
             w += Integer.parseInt(lom1);
         }
-            String text = "(" + play + ") Rounds played: " + round + "; Wins: " + q + "; Losses: " + w + ".";
+            String text = String.format("(%s) Rounds played: %d; Wins: %d; Losses: %d.", play, round, q, w);
             FileWriter resultat = new FileWriter(file, true);
-            resultat.write(text + "\r\n" + "\r\n");
+            resultat.write(String.format("%s\r\n\r\n", text));
             resultat.flush();
-//            System.out.println(text);
     }
 }

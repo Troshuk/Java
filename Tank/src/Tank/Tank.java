@@ -26,7 +26,6 @@ public class Tank {
     }
 
     public String getName() {
-
         return name;
     }
 
@@ -44,7 +43,6 @@ public class Tank {
 
     public Tank(String name, int life, int attack, int armor) {
         this.name = name;
-
         this.life = life;
         this.attack = attack;
         this.armor = armor;

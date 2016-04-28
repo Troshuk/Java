@@ -18,3 +18,15 @@
 
 (sdfs) Rounds played: 15; Wins: 1; Losses: 0.
 
+(Den) Rounds played: 9; Wins: 2; Losses: 1.
+
+(Den) Rounds played: 10; Wins: 3; Losses: 1.
+
+(Den) Rounds played: 6; Wins: 4; Losses: 1.
+
+(Den) Rounds played: 7; Wins: 5; Losses: 1.
+
+(Den) Rounds played: 8; Wins: 6; Losses: 1.
+
+(Den) Rounds played: 11; Wins: 7; Losses: 1.
+
